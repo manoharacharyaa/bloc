@@ -1,4 +1,5 @@
 import 'package:bloc_1/cubit/counter_cubit.dart';
+import 'package:bloc_1/inc_dec_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -24,21 +25,14 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      floatingActionButton: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          FloatingActionButton(
-            heroTag: 'btn1',
-            onPressed: () => counterCubit.increment(),
-            child: Icon(Icons.add),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.navigate_next),
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => IncDecPage(),
           ),
-          const SizedBox(height: 20),
-          FloatingActionButton(
-            heroTag: 'btn1',
-            onPressed: () => counterCubit.decrement(),
-            child: Icon(Icons.minimize),
-          ),
-        ],
+        ),
       ),
     );
   }
