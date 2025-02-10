@@ -11,10 +11,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final counterCubit = CounterCubit();
-
   @override
   Widget build(BuildContext context) {
+    final counterCubit = BlocProvider.of<CounterCubit>(context);
     return Scaffold(
       body: Center(
         child: BlocBuilder(
@@ -30,9 +29,7 @@ class _HomePageState extends State<HomePage> {
         onPressed: () => Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => IncDecPage(
-              counterCubit: counterCubit,
-            ),
+            builder: (context) => IncDecPage(),
           ),
         ),
       ),
