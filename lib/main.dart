@@ -1,3 +1,4 @@
+import 'package:bloc_1/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.dark(),
+      home: const HomePage(),
     );
   }
 }
