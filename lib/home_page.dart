@@ -30,7 +30,9 @@ class _HomePageState extends State<HomePage> {
         onPressed: () => Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => IncDecPage(),
+            builder: (context) => IncDecPage(
+              counterCubit: counterCubit,
+            ),
           ),
         ),
       ),

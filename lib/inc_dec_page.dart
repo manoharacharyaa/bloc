@@ -2,12 +2,12 @@ import 'package:bloc_1/cubit/counter_cubit.dart';
 import 'package:flutter/material.dart';
 
 class IncDecPage extends StatelessWidget {
-  const IncDecPage({super.key});
+  const IncDecPage({super.key, required this.counterCubit});
+
+  final CounterCubit counterCubit;
 
   @override
   Widget build(BuildContext context) {
-    final counterCubit = CounterCubit();
-
     return Scaffold(
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
